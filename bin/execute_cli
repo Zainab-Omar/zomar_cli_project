@@ -2,6 +2,6 @@
 
 # require_relative '../config/environment'
 
-puts "Welcome to Edamam app!"
+Edamam::CLI.new.greeting
 
 
