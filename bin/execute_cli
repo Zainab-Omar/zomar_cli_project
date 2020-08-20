@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-
-require_relative '..lib/zomar_cli_project'
-
-Edamam::CLI.new.greeting
+require_relative '../lib/zomar_cli_project'
+Edamam.new.greeting
 
 
