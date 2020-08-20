@@ -4,6 +4,7 @@ require 'openssl'
 require 'json'
 require 'pry'
 
+
 url = URI("https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=1%20large%20")
 
 http = Net::HTTP.new(url.host, url.port)
@@ -16,7 +17,6 @@ request["x-rapidapi-key"] = 'fb1f202508mshe6df39a6ec4a438p18ba5bjsn03d1a1af341b'
 
 response = http.request(request)
 result= response.read_body
-
- parsed_data= JSON.parse(result)
-    
- puts parsed_data
+parsed_data=JSON.parse(result)
+puts parsed_data
+ #binding.pry
