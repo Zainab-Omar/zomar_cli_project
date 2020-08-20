@@ -7,6 +7,6 @@
 -user sees details
 
 classes
--api 
--cli
--edamam
+-Api_data
+-CLI
+-Edamam
