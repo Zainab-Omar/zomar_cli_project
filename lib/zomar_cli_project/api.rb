@@ -2,8 +2,11 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 require 'json'
+require 'open-uri'
 require 'pry'
 class Api_Data
+
+ def self.get_data
 
   url = URI("https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=1%20large%20")
 
@@ -18,5 +21,6 @@ class Api_Data
   response = http.request(request)
   result= response.read_body
   parsed_data=JSON.parse(result)
-  #binding.pry
+  
+ end
 end
