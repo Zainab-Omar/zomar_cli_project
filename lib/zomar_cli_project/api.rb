@@ -18,5 +18,5 @@ class Api_Data
   response = http.request(request)
   result= response.read_body
   parsed_data=JSON.parse(result)
-  binding.pry
+  #binding.pry
 end
