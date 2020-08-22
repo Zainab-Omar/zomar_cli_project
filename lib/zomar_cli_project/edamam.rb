@@ -8,16 +8,11 @@ class Edamam
      @@all << self
     end
 
-   def self.all #class method add created object to and @@all array
+    def self.all #class method add created object to and @@all array
     @@all << self
    end
-#    
+   
 
-#     def self.create_from_collection(edamam_array) #edamam_hash => Api.get_data
-#     edamam_array.each do |element|
-#         Edamam.new(element)
-#      end
-#    end
  binding.pry
  end
 
