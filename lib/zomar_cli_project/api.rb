@@ -16,9 +16,9 @@ class Api
       request = Net::HTTP::Get.new(url)
       request["x-rapidapi-host"] = 'edamam-edamam-nutrition-analysis.p.rapidapi.com'
       request["x-rapidapi-key"] = 'fb1f202508mshe6df39a6ec4a438p18ba5bjsn03d1a1af341b'
-      
       response = http.request(request)
       result= response.read_body
+
       parsed_data =JSON.parse(result)
       calories=parsed_data["calories"]
       dietLabels=parsed_data["dietLabels"]
@@ -26,6 +26,6 @@ class Api
       totalNutrients=parsed_data["totalNutrients"]
       totalDaily=parsed_data["totalDaily"]
       edamam << {calories: calories, dietLabels: dietLabels, healthLabels: healthLabels, totalNutrients: totalNutrients, totalDaily: totalDaily}
-    end
-    #binding.pry
- end  
+      end
+   #binding.pry
+   end  
