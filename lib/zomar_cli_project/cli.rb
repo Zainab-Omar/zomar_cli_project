@@ -1,9 +1,15 @@
+require_relative "./api.rb"
+require_relative "./edamam.rb"
 require 'pry'
  
  class RunCli
-    
+    url=Api.new
     def call
-        puts 'Welcome to Edamam app! please enter the name of food and its quantity.'   
+           
+    end
+
+    def greeting_input
+     puts 'Welcome to Edamam app! please enter the name of food and its quantity.'
     end
 
 end
