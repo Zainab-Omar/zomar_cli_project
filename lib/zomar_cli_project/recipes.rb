@@ -1,5 +1,5 @@
-# require 'pry'
-# class Recipes
+require 'pry'
+class Recipes
 #     attr_accessor :title, :href, :ingredients, :thumbnail
 #      @@all=[]
       
@@ -22,7 +22,7 @@
 #     @@all << self
 #    end
    
-#   # binding.pry
+  # binding.pry
  
-#  end
+ end
 
