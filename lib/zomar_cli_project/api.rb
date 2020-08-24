@@ -1,34 +1,32 @@
-require 'uri'
-require 'net/http'
-require 'openssl'
-require 'json'
-require 'open-uri'
+
 require 'pry'
+require 'open-uri'
+require 'net/http'
+require 'json'
 
 class Api
-
-    def self.get_data
-      edamam=[]
-     # puts "please enter your meal."
-      input=gets.strip
-      url = URI("https://edamam-edamam-nutrition-analysis.p.rapidapi.com/api/nutrition-data?ingr=1%20large%20#{input}")
-      http = Net::HTTP.new(url.host, url.port)
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-      request = Net::HTTP::Get.new(url)
-      request["x-rapidapi-host"] = 'edamam-edamam-nutrition-analysis.p.rapidapi.com'
-      request["x-rapidapi-key"] = 'fb1f202508mshe6df39a6ec4a438p18ba5bjsn03d1a1af341b'
-  
-      response = http.request(request)
-      result= response.read_body
-
-      parsed_data =JSON.parse(result)
-      calories=parsed_data["calories"]
-      dietLabels=parsed_data["dietLabels"]
-      healthLabels=parsed_data["healthLabels"]
-      totalNutrients=parsed_data["totalNutrients"]
-      totalDaily=parsed_data["totalDaily"]
-      edamam << {calories: calories, dietLabels: dietLabels, healthLabels: healthLabels, totalNutrients: totalNutrients, totalDaily: totalDaily}
+ def get_data(user_input) #input should be list of ingredients comma seperated
+url="http://www.recipepuppy.com/api/?i=#{user_input}"
+uri = URI.parse(url)
+response = Net::HTTP.get_response(uri)
+response.body
+parsed_data=JSON.parse(response.body)
+recipes = parsed_data["results"]
+      attributes = []
+      recipes.each do |recipe|
+        if recipe["ingredients"].include?(user_input)
+          attributes << recipe
       end
-   #binding.pry
-   end  
+  end
+end
+def print_data(recipe_array)
+  attributes = []
+  recipe_array.each_with_index do |recipe, i|
+    title = recipe["title"].strip
+    if title.length > 0
+      attributes << "#{i+1}. #{title}"
+      end
+    end
+  attributes
+end
+end
