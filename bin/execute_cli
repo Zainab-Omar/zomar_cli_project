@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/zomar_cli_project.rb'
 
-RunCli.new.call
+ZomarCliProject::RunCli.new.call
 
 

@@ -1,7 +1,8 @@
-require_relative "./zomar_cli_project/version.rb"
-require_relative "./zomar_cli_project/cli.rb"
-require_relative "./zomar_cli_project/api.rb"
-require_relative "./zomar_cli_project/recipes.rb"
+require_relative "./zomar_cli_project/version"
+require_relative "./zomar_cli_project/cli"
+require_relative "./zomar_cli_project/api"
+require_relative "./zomar_cli_project/recipes"
+
 
 module ZomarCliProject
   class Error < StandardError; end
