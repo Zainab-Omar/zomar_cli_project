@@ -12,7 +12,7 @@
   def list
     puts "=> Please type your ingredients to get the matching recipes or type 'exit' to leave the app. "
     user_input=gets.strip.downcase
-     if user_input != "exit"
+     if user_input != "exit" && ZomarCliProject::Api.get_data(user_input)!=[]
      ZomarCliProject::Api.get_data(user_input)
      
      ZomarCliProject::Recipes.all.each_with_index do |title, index|
