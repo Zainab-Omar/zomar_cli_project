@@ -1,6 +1,6 @@
 # ZomarCliProject
 
-Welcome to Edamam app! Your health matter. Find out how much calories and nutirion your food contains. 
+Welcome to my app! search for interesting recipes by their ingredients. 
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+to run this app write this on you terminal ./bin/execute_cli
 
 ## Development
 
