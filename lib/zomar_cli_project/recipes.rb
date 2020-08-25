@@ -7,14 +7,14 @@ class ZomarCliProject::Recipes
      @@all=[]
       
     def initialize(attributes)
-      attributes.each {|key, value| self.send(("#{key}="), value)} #in case Api added or remove one of their keys
+      attributes.each {|key, value| self.send(("#{key}="), value)} 
       @@all << self 
+  
     end
-   # binding.pry
+   
    def self.all #class method add created object to and @@all array
     @@all 
    end
-   
- 
+  
  end
 
