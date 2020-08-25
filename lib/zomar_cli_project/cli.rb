@@ -7,18 +7,18 @@
   def call
     puts "Welcome to my CLI Project for Puppy Recipes!"
     list
-  end
+   end
 
   def list
-     puts "=> Please enter your ingredients to get the matching recipes."
-     user_input=gets.strip.downcase
+    puts "=> Please enter your ingredients to get the matching recipes."
+    user_input=gets.strip.downcase
      if user_input != "exit"
      ZomarCliProject::Api.get_data(user_input)
      
      ZomarCliProject::Recipes.all.each_with_index do |title, index|
-        puts "#{index+1}.#{title.title}"
+      puts "#{index+1}.#{title.title}"
         end
-      display_discription
+    display_discription
     elsif user_input == "exit"
       goodbye
     else
@@ -61,7 +61,7 @@
   end
 
   def goodbye
-    puts "Thanks for using my app!"
+    puts "Thank you for using my app!"
   end 
 end
  
