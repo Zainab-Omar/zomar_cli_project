@@ -12,7 +12,7 @@ class ZomarCliProject::Recipes
   
     end
    
-   def self.all #class method add created object to and @@all array
+   def self.all 
     @@all 
    end
   
