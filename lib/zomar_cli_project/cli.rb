@@ -10,7 +10,7 @@
    end
 
   def list
-    puts "=> Please enter your ingredients to get the matching recipes."
+    puts "=> Please type your ingredients to get the matching recipes or type 'exit' to leave the app. "
     user_input=gets.strip.downcase
      if user_input != "exit"
      ZomarCliProject::Api.get_data(user_input)
@@ -55,7 +55,7 @@
     elsif answer == "no" || answer == "n"
       goodbye
     else
-      puts "Invalid. Please type again."
+      puts "Invalid. Please try again."
       display_again
     end
   end
