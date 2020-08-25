@@ -1,15 +1,17 @@
  require_relative "./version.rb"
+ require_relative "./recipes.rb"
+ require_relative "./api.rb"
  require 'pry'
  
- class ZomarCliProject::RunCli
+ class ZomarCliProject::Cli
     def call
-        
-    show_list
+      puts "Welcome to my app! please enter your ingredients comma separated for example: (eggs, tomatos, cheese)" 
+    #show_list
     #show_details
     #exit
     end
    def show_list
-    puts "Welcome to my app! please enter your ingredients comma separated for example: (eggs, tomatos, cheese)"
+    
     user_input=gets.strip
    end
    
