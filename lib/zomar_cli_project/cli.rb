@@ -3,9 +3,10 @@
  require_relative "./api.rb"
  require 'pry'
  
+  
  class ZomarCliProject::Cli
   def call
-    puts "Welcome to my CLI Project for Puppy Recipes!"
+    puts "Welcome to my CLI Project for Recipes Puppy!"
     list
    end
 
@@ -64,5 +65,3 @@
     puts "Thank you for using my app!"
   end 
 end
- 
-
