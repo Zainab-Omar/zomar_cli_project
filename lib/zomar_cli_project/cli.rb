@@ -22,7 +22,7 @@
    elsif user_input == "exit"
      goodbye
    else
-     puts "Invalid"
+     puts "Invalid input please enter the names of your ingredients"
      list
    end
  end
@@ -55,7 +55,7 @@
    elsif answer == "no" || answer == "n"
      goodbye
    else
-     puts "Invalid. Please try again."
+     puts "Invalid. Please enter 'yes' if you want to see more recipes or 'no' to exit out."
      display_again
    end
  end
