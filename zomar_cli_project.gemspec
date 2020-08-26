@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Zainab Omar'"]
   spec.email         = ["'zainab.alshaikhli01@gmail.com'"]
 
-  spec.summary       = %q{hello and welcome to my Edamam app!}
-  spec.description   = %q{hello and welcome to my Edamam app!}
+  spec.summary       = %q{hello and welcome to my app!}
+  spec.description   = %q{hello and welcome to my app!}
   spec.homepage      = "https://github.com/Zainab-Omar/zomar_cli_project"
   spec.license       = "MIT"
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
