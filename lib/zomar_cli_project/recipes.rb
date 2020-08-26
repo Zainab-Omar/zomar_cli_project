@@ -13,8 +13,7 @@ class ZomarCliProject::Recipes
     end
    
    def self.all 
-    @@all 
+    @@all
    end
-  
  end
 

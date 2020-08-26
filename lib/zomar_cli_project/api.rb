@@ -16,6 +16,7 @@ class ZomarCliProject::Api
     parsed_data=JSON.parse(response.body)
     recipes = parsed_data["results"] #output is array of hashes
     attributes={} 
+    
        recipes.each do |recipe|
 
          attributes[:title] = recipe["title"].strip
