@@ -1,6 +1,6 @@
 # ZomarCliProject
 
-Welcome to my app! search for interesting recipes by their ingredients. 
+Welcome to my app! search for interesting recipes by their ingredients. this CLI project is using recipe puppy Api to enable user search for recipes by entering the names of ingredients. 
 
 ## Installation
 
