@@ -1,3 +1,7 @@
+require 'pry'
+require 'open-uri'
+require 'net/http'
+require 'json'
 require_relative "./zomar_cli_project/version"
 require_relative "./zomar_cli_project/cli"
 require_relative "./zomar_cli_project/api"
